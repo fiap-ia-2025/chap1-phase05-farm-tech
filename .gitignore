@@ -1,0 +1,67 @@
+# =============================================================================
+# PYTHON BÁSICO
+# =============================================================================
+
+# Arquivos compilados Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+venv/
+.venv/
+env/
+
+# =============================================================================
+# JUPYTER NOTEBOOK
+# =============================================================================
+
+# Checkpoints do Jupyter
+.ipynb_checkpoints/
+
+# =============================================================================
+# MACHINE LEARNING
+# =============================================================================
+
+# Modelos salvos (podem ser muito grandes)
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+
+# Logs de treinamento
+*.log
+logs/
+
+# =============================================================================
+# SISTEMA OPERACIONAL (macOS)
+# =============================================================================
+
+# Arquivos do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =============================================================================
+# EDITOR (VS Code)
+# =============================================================================
+
+# Configurações do VS Code
+.vscode/
+
+# =============================================================================
+# PROJETO ESPECÍFICO
+# =============================================================================
+
+# Dados processados (podem ser grandes)
+data/processed/*.csv
+data/processed/*.parquet
+
+# Resultados temporários
+results/temp/
+plots/temp/
+
+# Configurações locais
+.env
+.env.local
