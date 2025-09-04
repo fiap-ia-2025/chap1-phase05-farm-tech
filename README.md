@@ -57,11 +57,10 @@ Desenvolver um sistema de **Machine Learning robusto e confiável** para previs�
 - [x] Estrutura do projeto organizada
 - [x] Ambiente virtual configurado
 - [x] Dependências instaladas
-- [x] Dataset carregado e verificado
-- [x] Análise exploratória iniciada (EDA - Parte 1)
+- [x] **Análise exploratória completa (EDA)**
+- [x] **Preparação de dados para ML**
 
 ### 🔄 Em Andamento
-- [ ] Análise exploratória completa
 - [ ] Análise de clustering
 - [ ] Desenvolvimento dos modelos
 
@@ -92,21 +91,17 @@ Desenvolver um sistema de **Machine Learning robusto e confiável** para previs�
 ## 📁 Estrutura do Projeto
 
 ```
-farm-tech-ml/
+chap1-phase05-farm-tech/
 ├── data/
 │   ├── raw/
 │   │   └── crop_yield.csv          # Dataset original
-│   └── processed/                  # Dados processados
+│   └── processed/
+│       └── dataset_ready.csv      # Dataset processado para ML
+├── models/
+│   └── scaler.pkl                 # Scaler para normalização
 ├── notebooks/
-│   ├── 01_eda_univariada.ipynb     # Análise de distribuições individuais
-│   ├── 02_eda_bivariada.ipynb      # Correlações e relacionamentos
-│   ├── 03_eda_multivariada.ipynb   # Padrões complexos e interações
-│   ├── 04_clustering_analysis.ipynb # Análise de clustering e tendências
-│   └── 05_modeling_analysis.ipynb   # Modelos preditivos e avaliação
-├── src/                           # Código Python
-├── models/                        # Modelos treinados
-├── results/                       # Resultados e métricas
-├── plots/                         # Gráficos e visualizações
+│   ├── 01_eda_complete.ipynb      # EDA completa (uni, bi, multi)
+│   └── 02_data_preparation.ipynb  # Preparação de dados
 ├── venv/                          # Ambiente virtual
 ├── requirements.txt               # Dependências
 └── README.md                      # Documentação
@@ -117,7 +112,7 @@ farm-tech-ml/
 1. **Clone o repositório**
 ```bash
 git clone [URL_DO_REPOSITORIO]
-cd farm-tech-ml
+cd chap1-phase05-farm-tech
 ```
 
 2. **Configure o ambiente virtual**
@@ -145,18 +140,25 @@ jupyter notebook
 
 ## 🔍 Análises Realizadas
 
-### EDA - Parte 1: Análise Univariada ✅
-- ✅ Distribuição das culturas
-- ✅ Análise de equilíbrio dos dados
-- ✅ Visualizações (gráficos de barras e pizza)
-- ✅ Verificação de qualidade dos dados
+### EDA Completa ✅
+- ✅ **Análise Univariada**: Distribuições e características individuais
+- ✅ **Análise Bivariada**: Correlações e relacionamentos entre variáveis
+- ✅ **Análise Multivariada**: Padrões complexos e interações
+- ✅ **Descobertas principais**: Yield bimodal por cultura, correlações ambientais
+
+### Preparação de Dados ✅
+- ✅ **Análise de outliers**: 0 outliers reais detectados
+- ✅ **Feature Engineering**: 9 novas features criadas
+- ✅ **One-Hot Encoding**: Variável 'Crop' transformada
+- ✅ **Normalização**: 13 features padronizadas
+- ✅ **Dataset final**: 18 features prontas para ML
 
 ## 📊 Próximos Passos
 
-1. **Completar EDA** com análise de variáveis numéricas
-2. **Implementar clustering** para identificar tendências
-3. **Desenvolver 5 modelos** de regressão
-4. **Avaliar performance** e comparar resultados
+1. **Análise de clustering** para identificar tendências de produtividade
+2. **Desenvolver 5 modelos** de regressão
+3. **Avaliar performance** e comparar resultados
+4. **Documentação final** e vídeo demonstrativo
 
 ## 📝 Licença
 
@@ -164,6 +166,6 @@ Este projeto é desenvolvido para fins educacionais no curso de IA da FIAP.
 
 ---
 
-**Última atualização**: 27/08/2024
-**Versão**: 0.1.0
-**Status**: EDA em andamento
+**Última atualização**: 04/09/2024
+**Versão**: 0.2.0
+**Status**: EDA e preparação de dados concluídas
