@@ -98,7 +98,11 @@ farm-tech-ml/
 │   │   └── crop_yield.csv          # Dataset original
 │   └── processed/                  # Dados processados
 ├── notebooks/
-│   └── crop_yield_analysis.ipynb  # Notebook principal
+│   ├── 01_eda_univariada.ipynb     # Análise de distribuições individuais
+│   ├── 02_eda_bivariada.ipynb      # Correlações e relacionamentos
+│   ├── 03_eda_multivariada.ipynb   # Padrões complexos e interações
+│   ├── 04_clustering_analysis.ipynb # Análise de clustering e tendências
+│   └── 05_modeling_analysis.ipynb   # Modelos preditivos e avaliação
 ├── src/                           # Código Python
 ├── models/                        # Modelos treinados
 ├── results/                       # Resultados e métricas
@@ -138,10 +142,6 @@ jupyter notebook
 - [Seu Nome] - RM [Seu RM]
 - [Nome do Colega] - RM [RM do Colega]
 - [Nome do Colega] - RM [RM do Colega]
-
-## 📚 Notebooks
-
-- **`crop_yield_analysis.ipynb`**: Análise principal (em desenvolvimento)
 
 ## 🔍 Análises Realizadas
 
