@@ -244,10 +244,5 @@ O projeto **FarmTech Solutions** demonstra que modelos preditivos podem apoiar s
 
 **Random Forest** foi escolhido como modelo final, oferecendo alta performance preditiva (98.8% de variância explicada) e interpretabilidade adequada, apesar das limitações identificadas nos resíduos.
 
-## 📞 Contato
-
-Para dúvidas ou sugestões sobre o projeto, entre em contato com o Grupo 21.
-
----
 
 **Desenvolvido para a FIAP - Faculdade de Informática e Administração Paulista**
