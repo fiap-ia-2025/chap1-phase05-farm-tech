@@ -6,11 +6,11 @@
   </a>
 </p>
 
-## 👥 Grupo 21
+## 👥 Grupo 28
 
 ## 👨‍🎓 Integrantes:
 
-- Amanda Vieira Pires (RM565045)
+- Amanda Vieira Pires (RM566330)
 - Ana Gabriela Soares Santos (RM565235)
 - Bianca Nascimento de Santa Cruz Oliveira (RM561390)
 - Milena Pereira dos Santos Silva (RM565464)
