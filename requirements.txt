@@ -8,6 +8,7 @@ seaborn>=0.13.0
 # Advanced ML Libraries
 xgboost>=2.0.0
 lightgbm>=4.1.0
+tensorflow>=2.15.0
 
 # Data Visualization
 plotly>=5.17.0
