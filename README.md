@@ -303,7 +303,7 @@ os arquivos de dados em CSV;
 
 * **Resiliência:** se a instância falhar, toda a aplicação fica indisponível até reinicialização ou substituição.
 
-## Estimativas de Custo
+## 💸 Estimativas de Custos
 
 Foram realizadas 2 estimativas da Arquitetura de Solução apresentada acima:
 
