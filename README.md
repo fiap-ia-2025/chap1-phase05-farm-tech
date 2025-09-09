@@ -250,7 +250,6 @@ A infraestrutura escolhida para rodar o projeto e disponibilizá-lo em produçã
 
 A arquitetura da infraestrutura está representada na imagem abaixo:
 
-
 <p align="center">
   <img src="img/Cloud Architecture.png" alt="Arquitetura de Solução">
 </p>
@@ -273,16 +272,66 @@ os arquivos de dados em CSV;
 
 * código-fonte da aplicação e scripts de treinamento.
 
-📌 Justificativas de Escolha
+## 📌 Justificativas de Escolha
 
 * **EC2:** garante um ambiente controlado e flexível para hospedar tanto o broker de mensagens quanto a API e o processo de treinamento.
 
-* **RabbitMQ: protocolo robusto e confiável para receber mensagens MQTT do ESP32.
+* **RabbitMQ:** protocolo robusto e confiável para receber mensagens MQTT do ESP32.
 
-* Flask API: solução leve para expor endpoints REST de consulta e previsão.
+* **Flask API:** solução leve para expor endpoints REST de consulta e previsão.
 
-* Elastic IP: necessário para que os dispositivos e clientes externos sempre consigam acessar a aplicação no mesmo endereço público.
+* **Elastic IP:** necessário para que os dispositivos e clientes externos sempre consigam acessar a aplicação no mesmo endereço público.
 
-* EBS: armazenamento em blocos persistente, adequado para guardar dados estruturados, modelos e código, funcionando como “HD virtual” da instância.
+* **EBS:** armazenamento em blocos persistente, adequado para guardar dados estruturados, modelos e código, funcionando como “HD virtual” da instância.
+
+## 📌 Vantagens
+
+* **Simplicidade:** solução concentrada em uma única EC2.
+
+* **Baixo custo:** uso mínimo de serviços gerenciados, aproveitando EBS incluso.
+
+* **Flexibilidade:** pode rodar tanto a API quanto o treinamento no mesmo servidor.
+
+* **Persistência:** os dados e modelos ficam salvos no EBS mesmo após reinício da instância.
+
+
+## 📌 Desvantagens
+
+* **Escalabilidade limitada:** uma única EC2 pode não suportar grandes volumes de dados ou muitos acessos simultâneos.
+
+* **Gerenciamento manual:** instalação, configuração e manutenção de RabbitMQ e Flask ficam sob responsabilidade do time.
+
+* **Resiliência:** se a instância falhar, toda a aplicação fica indisponível até reinicialização ou substituição.
+
+## Estimativas de Custo
+
+Foram realizadas 2 estimativas da Arquitetura de Solução apresentada acima:
+
+1. Região US East (N. Virginia): $ 17.69/mês e $ 212.28/ano
+2. Região South America: $ 27.39/mês e $ 328.68/ano
+
+Seguem as imagens tiradas da AWS das estimativas:
+
+**São Paulo:**
+
+<p align="center">
+  <img src="img/estimativa_sp.png" alt="São Paulo">
+</p>
+
+**N. Virginia:**
+
+<p align="center">
+  <img src="img/estimativa_us.png" alt="São Paulo">
+</p>
+
+## 🎯 Conclusões
+
+Apesar de a região da Virgínia do Norte (us-east-1) ser mais barata, a escolha seguiremos com a região de São Paulo (sa-east-1), porque:
+
+* Garante acesso rápido aos dados dos sensores, reduzindo a latência.
+
+* Atende às restrições legais que proíbem armazenamento de dados no exterior.
+
+Dessa forma, a solução em São Paulo, mesmo com custo maior, é a mais adequada.
 
 **Desenvolvido para a FIAP - Faculdade de Informática e Administração Paulista**
