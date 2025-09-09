@@ -244,5 +244,45 @@ O projeto **FarmTech Solutions** demonstra que modelos preditivos podem apoiar s
 
 **Random Forest** foi escolhido como modelo final, oferecendo alta performance preditiva (98.8% de variância explicada) e interpretabilidade adequada, apesar das limitações identificadas nos resíduos.
 
+# 💰 Orçamento AWS Cloud
+
+A infraestrutura escolhida para rodar o projeto e disponibilizá-lo em produção foi a **AWS Cloud**.
+
+A arquitetura da infraestrutura está representada na imagem abaixo:
+
+
+<p align="center">
+  <img src="img/Cloud Architecture.png" alt="Arquitetura de Solução">
+</p>
+
+A arquitetura proposta utiliza um ESP32 como dispositivo para coleta de dados, enviando informações via protocolo MQTT para a nuvem da AWS.
+
+Na nuvem, foi escolhida uma instância EC2 que hospeda dois componentes principais:
+
+RabbitMQ, responsável por gerenciar as mensagens recebidas do ESP32;
+
+Flask API, que consome os dados do RabbitMQ, armazena-os em arquivos CSV e disponibiliza dois endpoints: consulta dos dados e previsão com base em um modelo de Machine Learning.
+
+A EC2 está associada a um Elastic IP, garantindo que os clientes externos tenham sempre o mesmo endereço fixo para acessar os serviços.
+
+O armazenamento persistente é feito em um volume EBS (Elastic Block Store), que guarda:
+
+os arquivos de dados em CSV;
+
+* modelo treinado em formato .pkl;
+
+* código-fonte da aplicação e scripts de treinamento.
+
+📌 Justificativas de Escolha
+
+* **EC2:** garante um ambiente controlado e flexível para hospedar tanto o broker de mensagens quanto a API e o processo de treinamento.
+
+* **RabbitMQ: protocolo robusto e confiável para receber mensagens MQTT do ESP32.
+
+* Flask API: solução leve para expor endpoints REST de consulta e previsão.
+
+* Elastic IP: necessário para que os dispositivos e clientes externos sempre consigam acessar a aplicação no mesmo endereço público.
+
+* EBS: armazenamento em blocos persistente, adequado para guardar dados estruturados, modelos e código, funcionando como “HD virtual” da instância.
 
 **Desenvolvido para a FIAP - Faculdade de Informática e Administração Paulista**
