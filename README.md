@@ -32,7 +32,6 @@
 
 ### 🎥 Assista à demonstração no YouTube
 
-[![Assista à demonstração no YouTube](https://img.youtube.com/vi/bu8EwQcKOZQ/0.jpg)]([adicionar-link-aqui])
 
 ## 📋 Sobre o Projeto
 
@@ -67,8 +66,6 @@ chap1-phase05-farm-tech/
 │   │   └── crop_yield.csv          # Dataset original
 │   └── processed/
 │       └── dataset_ready.csv       # Dataset processado
-├── models/
-│   └── scaler.pkl                  # Scaler salvo
 ├── FarmTech_Solutions_ML.ipynb     # Notebook consolidado
 ├── requirements.txt                # Dependências
 └── README.md                      # Este arquivo
@@ -238,6 +235,8 @@ jupyter>=1.0.0
 O projeto **FarmTech Solutions** demonstra que modelos preditivos podem apoiar significativamente a tomada de decisão agrícola, auxiliando no aumento da produtividade e na redução de riscos climáticos.
 
 **Random Forest** foi escolhido como modelo final, oferecendo alta performance preditiva (98.7% de variância explicada) e interpretabilidade adequada, apesar das limitações identificadas.
+
+[![Assista à demonstração no YouTube](https://img.youtube.com/vi/bu8EwQcKOZQ/0.jpg)](https://youtu.be/JZVMvpQtfQo)
 
 # 💰 Orçamento AWS Cloud
 
