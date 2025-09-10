@@ -30,6 +30,10 @@
 
 # 🌾 FarmTech Solutions - Projeto de IA para Agricultura
 
+### 🎥 Assista à demonstração no YouTube
+
+[![Assista à demonstração no YouTube](https://img.youtube.com/vi/bu8EwQcKOZQ/0.jpg)]([adicionar-link-aqui])
+
 ## 📋 Sobre o Projeto
 
 O **FarmTech Solutions** é um projeto de Inteligência Artificial desenvolvido para a **Fase 5 do curso de Inteligência Artificial da FIAP**. O projeto visa analisar dados agrícolas de uma fazenda de médio porte (200 hectares) para prever rendimento de safras e identificar tendências de produtividade.
@@ -65,12 +69,8 @@ chap1-phase05-farm-tech/
 │       └── dataset_ready.csv       # Dataset processado
 ├── models/
 │   └── scaler.pkl                  # Scaler salvo
-├── notebooks/
-│   ├── 01_eda.ipynb               # Análise Exploratória
-│   ├── 02_data_preparation.ipynb  # Preparação dos Dados
-│   ├── 03_clustering.ipynb        # Análise de Clustering
-│   └── 04_modelos.ipynb           # Modelagem Preditiva
-├── requirements.txt               # Dependências
+├── FarmTech_Solutions_ML.ipynb     # Notebook consolidado
+├── requirements.txt                # Dependências
 └── README.md                      # Este arquivo
 ```
 
@@ -86,17 +86,17 @@ chap1-phase05-farm-tech/
 
 **1. 📊 Dados** (156 registros, 4 culturas)
 
-**2. 🔍 EDA** (Yield bimodal por cultura)
+**2. 🔍 EDA** (Yield bimodal por cultura, correlações)
 
 **3. 🛠️ Preparação** (12 features: 4 originais + 4 criadas + 4 dummies)
 
-**4. 🔗 Clustering** (K-means, DBSCAN, Hierárquico)
+**4. 🔗 Clustering** (K-means, DBSCAN, Hierárquico - análise por cultura)
 
 **5. 🤖 Modelagem** (5 algoritmos: Linear, Random Forest, XGBoost, SVR, Neural)
 
-**6. 📊 Validação** (5-fold CV, R², RMSE, MAE)
+**6. 📊 Validação** (5-fold CV, análise de overfitting)
 
-**7. 🏆 Seleção** (Random Forest: R² = 0.988)
+**7. 🏆 Seleção** (Random Forest: R² = 0.987, RMSE = 2,775)
 
 ### Critérios de Qualidade
 
@@ -105,10 +105,6 @@ chap1-phase05-farm-tech/
 - Validação robusta (5-fold CV)
 - Métricas múltiplas (R², RMSE, MAE)
 - Interpretabilidade (feature importance)
-
-**⚠️ Limitações:**
-- Heterocedasticidade nos resíduos
-- Não-normalidade dos resíduos
 
 ## 📝 Metodologia
 
@@ -133,7 +129,7 @@ chap1-phase05-farm-tech/
 ### 4. **Modelagem Preditiva**
 - 5 algoritmos de regressão
 - Validação cruzada 5-fold
-- Análise de resíduos
+- Análise de overfitting
 - Feature importance
 
 ## 🚀 Como Executar
@@ -172,11 +168,8 @@ pip install -r requirements.txt
 # Inicie o Jupyter Notebook
 jupyter notebook
 
-# Execute os notebooks na ordem:
-# 1. 01_eda.ipynb
-# 2. 02_data_preparation.ipynb
-# 3. 03_clustering.ipynb
-# 4. 04_modelos.ipynb
+# Execute o notebook consolidado:
+# FarmTech_Solutions_ML.ipynb
 ```
 
 ## 🛠️ Tecnologias e Dependências
@@ -210,13 +203,13 @@ jupyter>=1.0.0
 ### 🏆 Modelo Final Escolhido: Random Forest
 
 **Performance:**
-- **R² = 0.988**: Explica 98.8% da variância
-- **RMSE = 3,291 ton/ha**: Erro médio aceitável
-- **MAE = 1,866 ton/ha**: Erro absoluto baixo
+- **R² = 0.987**: Explica 98.7% da variância
+- **RMSE = 2,775 ton/ha**: Erro médio baixo
+- **MAE = 1,533 ton/ha**: Erro absoluto baixo
 
 **Robustez:**
-- **Overfitting = 0.010**: Controlado
-- **Estabilidade = 0.007**: Alta consistência
+- **Overfitting = 0.011**: Controlado e aceitável
+- **Estabilidade = 0.008**: Alta consistência
 
 ### 📊 Insights Principais
 
@@ -234,15 +227,17 @@ jupyter>=1.0.0
 
 ### ⚠️ Limitações Identificadas
 
-- **Heterocedasticidade**: Modelo menos preciso para Yield alto
-- **Não-normalidade**: Resíduos não seguem distribuição normal
-- **Padrão sistemático**: Erros não são completamente aleatórios
+- **Dataset pequeno**: 156 registros podem limitar generalização para outras culturas
+- **Domínio específico**: Modelo treinado apenas para 4 culturas específicas
+- **Variáveis limitadas**: Apenas 4 variáveis climáticas (pode haver outros fatores importantes)
+- **Temporal**: Dados não incluem variação temporal (sazonalidade, tendências)
+- **Overfitting leve**: Random Forest apresenta gap entre treino (R²=0.998) e validação (R²=0.987)
 
 ## 🎯 Conclusões
 
 O projeto **FarmTech Solutions** demonstra que modelos preditivos podem apoiar significativamente a tomada de decisão agrícola, auxiliando no aumento da produtividade e na redução de riscos climáticos.
 
-**Random Forest** foi escolhido como modelo final, oferecendo alta performance preditiva (98.8% de variância explicada) e interpretabilidade adequada, apesar das limitações identificadas nos resíduos.
+**Random Forest** foi escolhido como modelo final, oferecendo alta performance preditiva (98.7% de variância explicada) e interpretabilidade adequada, apesar das limitações identificadas.
 
 # 💰 Orçamento AWS Cloud
 
