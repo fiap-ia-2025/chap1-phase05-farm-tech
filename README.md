@@ -305,6 +305,13 @@ Foram realizadas 2 estimativas da Arquitetura de Solução apresentada acima:
 1. Região US East (N. Virginia): $ 17.69/mês e $ 212.28/ano
 2. Região South America: $ 27.39/mês e $ 328.68/ano
 
+Características da máquina:
+
+* 2 CPUs
+* 1 GIB de memória
+* 5 Gigabit de rede
+* 50 GB de armazenamento (HD)
+
 Seguem as imagens tiradas da AWS das estimativas:
 
 **São Paulo:**
