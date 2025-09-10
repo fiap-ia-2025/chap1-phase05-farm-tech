@@ -138,7 +138,7 @@ chap1-phase05-farm-tech/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/fiap-ia-2025/chap1-phase4-agricultural-machine
+git clone https://github.com/fiap-ia-2025/chap1-phase05-farm-tech/blob/main/README.md
 
 # Entre no diretório
 cd chap1-phase05-farm-tech
