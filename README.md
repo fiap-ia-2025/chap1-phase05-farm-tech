@@ -253,15 +253,15 @@ A arquitetura proposta utiliza um ESP32 como dispositivo para coleta de dados, e
 
 Na nuvem, foi escolhida uma instância EC2 que hospeda dois componentes principais:
 
-RabbitMQ, responsável por gerenciar as mensagens recebidas do ESP32;
+* RabbitMQ, responsável por gerenciar as mensagens recebidas do ESP32;
 
-Flask API, que consome os dados do RabbitMQ, armazena-os em arquivos CSV e disponibiliza dois endpoints: consulta dos dados e previsão com base em um modelo de Machine Learning.
+* Flask API, que consome os dados do RabbitMQ, armazena-os em arquivos CSV e disponibiliza dois endpoints: consulta dos dados e previsão com base em um modelo de Machine Learning.
 
 A EC2 está associada a um Elastic IP, garantindo que os clientes externos tenham sempre o mesmo endereço fixo para acessar os serviços.
 
 O armazenamento persistente é feito em um volume EBS (Elastic Block Store), que guarda:
 
-os arquivos de dados em CSV;
+* os arquivos de dados em CSV;
 
 * modelo treinado em formato .pkl;
 
