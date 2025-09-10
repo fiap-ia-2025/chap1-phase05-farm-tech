@@ -340,6 +340,4 @@ Dessa forma, a solução em São Paulo, mesmo com custo maior, é a mais adequad
 
 [![Assista à demonstração no YouTube](https://img.youtube.com/vi/tuuY2Y89NyU/0.jpg)](https://www.youtube.com/watch?v=tuuY2Y89NyU)
 
-https://youtu.be/tuuY2Y89NyU
-
 **Desenvolvido para a FIAP - Faculdade de Informática e Administração Paulista**
