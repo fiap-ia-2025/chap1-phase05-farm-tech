@@ -233,6 +233,7 @@ O projeto **FarmTech Solutions** demonstra que modelos preditivos podem apoiar s
 
 **Random Forest** foi escolhido como modelo final, oferecendo alta performance preditiva (98.7% de variância explicada) e interpretabilidade adequada, apesar das limitações identificadas.
 
+### 🎥 Assista à demonstração no YouTube
 [![Assista à demonstração no YouTube](https://img.youtube.com/vi/JZVMvpQtfQo/0.jpg)](https://youtu.be/JZVMvpQtfQo)
 
 # 💰 Orçamento AWS Cloud
