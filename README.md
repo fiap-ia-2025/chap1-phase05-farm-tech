@@ -30,9 +30,6 @@
 
 # 🌾 FarmTech Solutions - Projeto de IA para Agricultura
 
-### 🎥 Assista à demonstração no YouTube
-
-
 ## 📋 Sobre o Projeto
 
 O **FarmTech Solutions** é um projeto de Inteligência Artificial desenvolvido para a **Fase 5 do curso de Inteligência Artificial da FIAP**. O projeto visa analisar dados agrícolas de uma fazenda de médio porte (200 hectares) para prever rendimento de safras e identificar tendências de produtividade.
